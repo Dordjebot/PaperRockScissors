@@ -1,0 +1,117 @@
+* {
+  font-size: 62.5%;
+  margin: 0px;
+  border: 0px;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 12rem;
+  background-color: rgb(224, 223, 121);
+  display: flex;
+  z-index: 1;
+}
+
+.score {
+  font-size: 1.8rem;
+  display: block;
+  position: absolute;
+  inline-size: 12rem;
+  width: 30rem;
+  margin: 3rem;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10rem;
+  transform: translateX(10%);
+}
+button {
+  border-radius: 4%;
+  padding: 1rem 1rem;
+  margin-left: 12rem;
+  height: 11rem;
+  outline: none;
+}
+button:hover {
+  background-color: tomato;
+  color: aliceblue;
+}
+.overlay {
+  position: absolute;
+  background-color: rgb(63, 58, 58);
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+}
+.player {
+  display: none;
+}
+.computer {
+  display: none;
+}
+.message {
+  display: none;
+  z-index: 99;
+  position: absolute;
+  text-align: center;
+  width: 25rem;
+  height: 25rem;
+  color: white;
+  background-color: yellow;
+  transform: translate(200%, 50%);
+  background-color: rgb(63, 58, 58);
+}
+.message1 {
+  display: block;
+}
+.player1 {
+  display: block;
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  background-color: rgb(63, 58, 58);
+  z-index: 99;
+  top: 40vh;
+  animation: moveright 3s;
+}
+.computer1 {
+  display: block;
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  background-color: rgb(63, 58, 58);
+  z-index: 99;
+  top: 40vh;
+  left: 109rem;
+  animation: moveleft 3s;
+}
+.img {
+  width: 25rem;
+  height: 25rem;
+}
+
+@keyframes moveright {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-110%);
+  }
+}
